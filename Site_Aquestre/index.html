@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/95aeca3f61.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Aquestre</title>
+
+    <style>
+
+        body{
+            background-color: #e9e1e1;
+        }
+        /*BANNER------------------------------------------------------------------*/
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-flow: row-reverse;
+            background-color: #d4bcbc;
+            padding: 5%;                                                                             
+        }
+
+        main .texto p{
+            font-family:'Inria Serif', serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c2011;
+        }
+
+        main img{
+            background-color: aliceblue;
+            padding: 2px;
+            margin-top: 3% ;
+        }
+
+        /*DESTAQUES------------------------------------------------------------------*/
+        article{
+            background-color: #e9d5d5;
+            padding: 5%;
+        }
+        article h3{
+            font-family: 'Inria Serif', serif;
+            font-weight: normal;
+            font-size: 40px;
+            color: #2c2011;
+            margin-left: 43%;
+        }
+        article .destaques{
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 3%;
+        }
+
+        article .b1, .b2, .b3{
+            background-color: #a28e8e;
+            border-radius: 15px;
+            padding: 2%;
+            width: 22.5%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+        article .b1 img, .b2 img, .b3 img{
+            max-width: 100%;
+            margin-bottom: 10px;
+            background-color: aliceblue;
+            padding: 2px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        article .produto{
+            margin-top: 5%;
+            font-size: 25px;
+        }
+        .preco {
+          font-size: 1.2em;
+        }
+        .subpreco{
+            color: #626060;
+            font-size: 1rem;
+            text-decoration: line-through;
+        }
+        .botoes{
+          display: flex;
+        }
+        .botao {
+          display: block;
+          background-color: #d4bcbc;
+          text-align: center;
+          padding: 8px;
+          width: 100%;
+          border-radius: 8px;
+          transition: 0.2s ease;
+          border: none;
+          margin-left: 1%;
+          transition: all 0.3s ease-in-out;
+        }
+        .botao a{
+          color: #242323;
+          text-decoration: none;
+          font-size: 1rem;
+        }
+        .botao:hover {
+          background-color:rgb(112, 99, 95);
+          transform: scale(0.9);
+        }
+
+        /*DIVULGAÇÃO-----------------------------------------------------------------*/
+        .divulgacao{
+            display: flex;
+            flex-flow: row;
+        }
+        .safe h4{
+            font-family: 'Inria Serif', serif;
+            font-weight: normal;
+            font-size: 40px;
+            color: #2c2011;
+        }
+        .safe{
+            display: flex;
+            flex-flow: column;  
+            align-items: center;
+            margin-left: 15%;
+            margin-top: 5%;
+        }
+        .safe img{
+            margin-top: 10%;
+        }
+        
+        /*CATEGORIAS-----------------------------------------------------------------*/
+        .categorias{
+            padding: 5%; 
+        }
+        .categorias h3{
+            font-family: 'Inria Serif', serif;
+            font-weight: normal;
+            font-size: 40px;
+            color: #2c2011;
+            margin-left: 43%;
+        }
+        .categoriaitens{
+            display: flex;
+            flex-flow: row;
+            margin-top: 3%;
+            justify-content: space-between;
+        }
+        .itens{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+        .itens img{
+            background-color: aliceblue;
+            padding: 2px;
+            border-radius: 500px;
+            transition: all 0.3s ease-in-out;
+            object-fit: cover;
+        }
+        .itens img:hover{
+            cursor: pointer;
+            transform: scale(0.9);
+        }
+        .itens h5{
+            font-family: 'Inria Serif', serif;
+            font-weight: normal;
+            font-size: 20px;
+            color: #2c2011;
+            margin-top: 2%;
+        }
+    
+
+        @media screen and (max-width: 800px){
+            footer{
+                margin-bottom: 1%;
+            } 
+            main{
+                flex-flow: row-reverse wrap;
+                padding: 15%;                                                                             
+            }
+            main img{
+                margin-top: 10px;
+            }
+
+            article .b1 img, .b2 img, .b3 img{
+                height: auto;
+            }
+            article h3{
+                margin-left: 29%;
+            }
+            .botao {
+                padding: 2px;
+            }
+            
+            .categorias h3{
+                margin-left: 30%;
+            }
+            .categoriaitens{
+                display: flex;
+                flex-flow: column;
+            }
+
+            .divulgacao{
+                display: flex;
+                flex-flow: column;
+            }
+            .safe{
+                margin-left: 5%;
+            }
+            .safe h4{
+                text-align: center;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <div id="logo"><img src="imagens/logo.png" alt="logo" width="40px"></div>
+            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="conta.html">Conta</a></li>
+            <li><a href="carrinho.html">Carrinho</a></li>
+            <li><a href="favoritos.html">Favoritos</a></li>
+            <li><a href="compra.html">Compra</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="texto">
+            <p style=" font-size: 100px;">AQUESTRE</p><br>
+            <p style=" font-size: 30px;  width:80%; text-align: center; margin-left: 9%;">As melhores flores para as melhores pessoas.</p><br><br><br>
+            <p style="font-size: 20px;">Arranjos, buquês, vasos e aquários!</p>
+        </div>
+
+        <img src="imagens/banner.jpg" alt="banner" width="400px" height="600px"> 
+    </main>
+
+    <article>
+        <h3>Destaques</h3>
+
+        <div class="destaques">
+            <div class="b1">
+                <img src="imagens/vaso1.jpg" width="300px" height="400px">
+                <p class="produto">Vasos</p>
+                <p class="preco"><br>R$200,00 <font class="subpreco"> R$350,00</font></p>  
+
+                <div class="botoes">
+                    <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
+                    <button class="botao"><a href="#"><i class="fa-solid fa-heart" style="color: #2a2626;"></i></a></button>
+                    <button class="botao"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: #2a2626;"></i></a></button>
+                </div>
+            </div>
+
+            <div class="b2">
+                <img src="imagens/buque1.jpg" width="300px" height="400px">
+                <p class="produto">Buquê de noiva</p>
+                <p class="preco"><br>R$150,00 <font class="subpreco"> R$200,00</font></p>  
+
+                <div class="botoes">
+                    <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
+                    <button class="botao"><a href="#"><i class="fa-solid fa-heart" style="color: #2a2626;"></i></a></button>
+                    <button class="botao"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: #2a2626;"></i></a></button>
+                </div>
+            </div>
+
+            <div class="b3">
+                <img src="imagens/arranjo2.jpg" width="300px" height="400px">
+                <p class="produto">Arranjo mesclado</p>
+                <p class="preco"><br>R$100,00 <font class="subpreco"> R$150,00</font></p>  
+
+                <div class="botoes">
+                    <button class="botao"><a href="#"><font class="botao_text">Comprar</font></a></button>
+                    <button class="botao"><a href="#"><i class="fa-solid fa-heart" style="color: #2a2626;"></i></a></button>
+                    <button class="botao"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: #2a2626;"></i></a></button>
+                </div>
+            </div>
+        </div><br><br><br><br><br><br><br>
+
+        <div class="divulgacao">
+            <img src="imagens/folder.png" width="500px" height="750px">
+
+            <div class="safe">
+                <h4>Por que confiar na Aquestre?</h4>
+                <img src="imagens/qualidade.png" width="450px" height="400px">
+            </div>
+        </div>
+    </article>
+
+    <div class="categorias">
+        <h3>Categorias</h3>
+
+        <div class="categoriaitens">
+            <div class="itens">
+                <img src="imagens/aquario.jpg" height="300px" width="300px">
+                <h5>Aquários</h5>
+            </div>
+
+            <div class="itens">
+                <img src="imagens/buque2.jpg" height="300px" width="300px">
+                <h5>Buquês</h5>
+            </div>
+
+            <div class="itens">
+                <img src="imagens/vaso2.jpg" height="300px" width="300px">
+                <h5>Vasos</h5>
+            </div>
+
+            <div class="itens">
+                <img src="imagens/arranjo1.jpg" height="300px" width="300px">
+                <h5>Arranjos</h5>
+            </div>
+          
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <div id="icons">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+            </div>
+            <li>Info - política de privacidade - termos de uso</li>
+            <li>suporte@empresa_aquestre.com</li>
+            <li>2023 Aquestre</li>            
+            
+        </ul>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/95aeca3f61.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Compra</title>
+
+    <style>
+        main{
+            padding: 5%;
+        }
+        
+        /*PRODUTO--------------------------------------------------------------*/
+        main .esquerda{
+            background-color: #a27b7b;
+            min-height: 100%;
+            float: left;
+            width: 50%;
+            padding: 2%;
+            border-radius: 15px;
+            margin-top: 5%;
+        }
+        .produto{
+            background-color: #d7cfcf;
+            border-radius: 15px;
+            padding: 2%;
+            width: 70%;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .produto img{
+            max-width: 100%;
+            background-color: aliceblue;
+            padding: 2px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+        .info{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-flow: column;
+            margin-right: 8%;
+            margin-bottom: 60px;
+        }      
+        .nome{
+            font-size: 20px;
+        }
+        .preco {
+            font-size: 18px;
+        }
+        .subpreco{
+            color: #626060;
+            font-size: 15px;
+            text-decoration: line-through;
+        }
+        .ds{
+            font-size: 15px;
+            color: #2b2a2a;
+        }
+
+        /*PREÇO------------------------------------------------------------------*/
+        main .direita{
+            float: right;
+            width: 40%;
+            margin-top: 3%;
+        }
+        .direita h3{
+            font-family: 'Inria Serif', serif;
+            font-weight: normal;
+            font-size: 40px;
+            color: #2c2011;
+            margin-left: 40%;
+        }
+        .t{
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            margin-top: 8%;
+        }
+        .t h5{
+            font-family: 'Inria Serif', serif;
+            font-weight: normal;
+            font-size: 20px;
+            color: #2c2011;
+            margin-right:10%;
+        }
+        .pagamento input{
+            border: none;
+            margin: 2%;
+        }
+        .endereço input{
+            margin-top: 3%;
+            border: none;
+            outline: none;
+            background-color:#d4d2d2;
+            padding: 2%;
+            border-radius: 8px;
+            width: 40%;
+            color: #212121;
+            font-size: 15px;
+        }
+        .direita button{
+            margin-top: 10%;
+            margin-left: 29%;
+            border: none;
+            background-color: #b39898;
+            padding: 2%;
+            border-radius: 8px;
+            width: 40%;
+            transition: all 0.3s ease-in-out;
+        }
+        .direita button:hover{
+            background-color: #afc3b7;
+            letter-spacing: 0.5px;
+        }
+
+        
+        @media screen and (max-width: 800px){
+            footer{
+                margin-top: 50rem;
+            } 
+            main{
+               padding: 15%
+            }
+
+
+            main .esquerda{
+                min-height: 100%;
+                width: 22.5rem;
+                padding: 2%;
+            }
+            .produto{
+                padding: 5%;
+                width: 20rem;
+            }
+            .info{
+                margin-left: 7%;
+                margin-bottom: 30px;
+            }  
+
+
+            main .direita{
+                width: 90%
+            }
+            .direita h3{
+                margin-left: 30%;
+            }
+            .endereço input{
+                width: 52%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <div id="logo"><img src="imagens/logo.png" alt="logo" width="40px"></div>
+            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="conta.html">Conta</a></li>
+            <li><a href="carrinho.html">Carrinho</a></li>
+            <li><a href="favoritos.html">Favoritos</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="esquerda">
+            <div class="produto">
+                <img src="imagens/arranjo2.jpg" width="250px" height="250px">
+                <div class="info">
+                    <p class="nome">Arranjo mesclado</p>
+                    <p class="preco"><br>R$100,00 <font class="subpreco"> R$150,00</font></p>
+                    <p class="ds"><br>Categoria: Arranjos</p>
+                </div>
+            </div>  
+        </div>
+
+        <div class="direita">
+            <h3>TOTAL</h3>
+
+            <div class="pagamento">
+                <div class="t"><h5>Formas de Pagamento</h5><hr width="50%"></div>
+
+                <form method="post">
+                    <input type="radio" name="pagamento" value="cre"><i class="fa-solid fa-ticket"></i>&nbsp;&nbsp;Boleto<br>
+                    <input type="radio" name="pagamento" value="deb"><i class="fa-solid fa-credit-card"></i>&nbsp;&nbsp;Cartão de débito/ Cartão de crédito<br>
+                    <input type="radio" name="pagamento" value="din"><i class="fa-brands fa-pix"></i>&nbsp;&nbsp;Pix<br>
+                </form>                
+            </div>
+
+            <div class="endereço">
+                <div class="t"><h5>Endereço</h5><hr width="50%"></div>
+                <form method="post">
+                    <input type="text" id="enedereço" size="21" placeholder="Informe seu endereço aqui">
+                </form>
+            </div>
+
+            <button><p>Comprar</p></button>
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <div id="icons">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+            </div>
+            <li>Info - política de privacidade - termos de uso</li>
+            <li>suporte@empresa_aquestre.com</li>
+            <li>2023 Aquestre</li>            
+            
+        </ul>
+    </footer>
+</body>
+</html>
