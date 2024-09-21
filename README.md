@@ -1,6 +1,5 @@
-# Meus Projetos
+# Projeto de site: Floricultura
  Olá, mundo!
  
- Este é o meu primeiro repositório. Ele contém todos os projetos que já realizei, ou estou realizando, como aspirante a desenvolvedora.
- 
+ Este é o meu primeiro repositório. Ele contém o projeto de site de uma floricultura que estou desenvolvendo atualmente apenas para fins didáticos.
 
